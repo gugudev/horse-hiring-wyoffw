@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  get '/encode/*url' => 'home#encode', format: :json
+
+  get "/:key" => 'home#decode', format: :json
+  get "/decode/*url" => 'home#decode', format: :json
+
 end
